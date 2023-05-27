@@ -21,9 +21,11 @@ public class Territories {
     @Column(name="territory_description")
     private char territoryDescription;
 
-    @ManyToOne()
-    @Column(name="region_id")
-    private Region regionId;
+    @OneToMany(mappedBy = "territory")
+    private List<EmployeeTerritories> EmployeeTerritories;
 
+    @ManyToOne()
+    @JoinColumn(name="region_id")
+    private Region region;
 
 }

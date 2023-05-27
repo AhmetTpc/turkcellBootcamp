@@ -67,6 +67,12 @@ public class Employees {
 
     @Column(name = "photo_path")
     private String photoPath;
+    
+    @OneToMany(mappedBy = "employee")
+    private List<Order> orders;
+
+    @OneToMany(mappedBy = "employee")
+    private List<EmployeeTerritory> EmployeeTerritories;
 
 
 }

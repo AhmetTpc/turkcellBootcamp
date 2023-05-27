@@ -13,6 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class EmployeeTerritories {
 
+    @EmbeddedId
     @ManyToOne()
     @MapsId("employeeId")
     @JoinColumn(name="employee_id")
